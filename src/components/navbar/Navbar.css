@@ -1,0 +1,75 @@
+/*styles for the navbar container*/
+.navbar-container {
+  border-bottom: 1px solid var(--secondary); /*adding a line at the bottom of the navbar*/
+  position: fixed; /*placing the navbar to fixed at the top*/
+  right: 0; /*placing the content center*/
+  left: 0; /*placing the content center*/
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: var(--bg-color);
+}
+
+/* navbar items */
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo icon styles */
+.logoIcon {
+  background-color: var(--primary);
+  height: 7vh;
+  padding: 0.5rem 0.2rem; /* setting the background of icon*/
+}
+
+/* styles for logo contianer */
+.logo-contianer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /*adding space between the icon and logo name*/
+}
+
+/* styles for the add item button */
+.navbar-btn {
+  color: var(--primary);
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--primary);
+}
+
+/*styles for the pop up modal*/
+.modal {
+  position: fixed;
+  top: 5rem;
+  left: 2rem; /*pushing the modal to the center*/
+  width: 80%; /*setting the width of the modal*/
+  background-color: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+  /* logo icon styles */
+  .logoIcon {
+    height: 9vh; /*the size for the icon*/
+  }
+
+  /* styles for logo contianer */
+  .logo-contianer p {
+    font-size: 1.1rem;
+  }
+
+  /* styles for the add button */
+  .navbar-btn {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  /*styles for the pop up modal*/
+  .modal {
+    top: 6rem;
+    left: 4.8rem; /*pushing the modal to the center*/
+  }
+}
