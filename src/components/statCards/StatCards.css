@@ -1,0 +1,100 @@
+.stat-card {
+  padding-top: 120px; /*pushing the content down fro the navbar*/
+}
+
+/*styles for the container*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /*creating two columns for the stats boxes*/
+  border: 1px solid var(--secondary);
+  border-radius: 1.5rem;
+}
+
+/*adding lines to the first box*/
+.card-container div:nth-child(1) {
+  border-right: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+}
+/*adding lines to the second box*/
+.card-container div:nth-child(2) {
+  border-bottom: 1px solid var(--secondary);
+}
+/*adding lines to the third box*/
+.card-container div:nth-child(3) {
+  border-right: 1px solid var(--secondary);
+}
+
+/*styles for the heading of the start cards*/
+.card-container h1 {
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.69rem;
+  font-weight: 400;
+}
+
+/*styles for the card counter*/
+.card-container p {
+  line-height: 1;
+  font-size: 2.25rem;
+}
+
+/*styles for the span tag*/
+.card-container span {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-left: 0.35rem; /*pushing the span to the left*/
+}
+
+/*styles for the stats box themself */
+.stat-box {
+  padding: 1.25rem; /*adding space in the boxs*/
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /*adding space between box header and number states*/
+}
+
+/*styles for the number of the boxes*/
+.expire-color {
+  color: var(--danger);
+}
+.best-before-color {
+  color: var(--warning);
+}
+.saved-color {
+  color: var(--safe);
+}
+
+@media (min-width: 768px) {
+  /*styles for the container*/
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*adding lines to the first box*/
+  .card-container div:nth-child(1) {
+    border-right: 1px solid var(--secondary);
+    border-bottom: none;
+  }
+  /*adding lines to the second box*/
+  .card-container div:nth-child(2) {
+    border-right: 1px solid var(--secondary);
+    border-bottom: none;
+  }
+  /*adding lines to the third box*/
+  .card-container div:nth-child(3) {
+    border-right: 1px solid var(--secondary);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stat-card {
+    padding-top: 140px; /*pushing the content down fro the navbar*/
+  }
+}
