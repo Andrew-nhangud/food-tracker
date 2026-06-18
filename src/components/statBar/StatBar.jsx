@@ -2,8 +2,8 @@ import "./StatBar.css";
 
 export const StatBar = () => {
   return (
-    <section className="container stat-card">
-      <div className="card-container">
+    <section className="container stat-contianer ">
+      <div className="stat-card">
         {/* markup to show things you have in your fridge*/}
         <div className="stat-box">
           <h1>in your fridge</h1>
