@@ -92,9 +92,3 @@
     border-right: 1px solid var(--secondary);
   }
 }
-
-@media (min-width: 1024px) {
-  .stat-card {
-    padding-top: 140px; /*pushing the content down fro the navbar*/
-  }
-}
