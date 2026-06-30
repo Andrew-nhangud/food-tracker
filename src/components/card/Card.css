@@ -1,0 +1,75 @@
+/*styles for the card container*/
+.card {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+
+.card-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/*styles for the inner card container*/
+.card-details-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/*styles for the card img*/
+.card-details-wrapper img {
+  height: 11vh;
+}
+
+/*container for the details of the card*/
+.card-details {
+  max-width: 67%; /* setting the max width of the container*/
+}
+
+/*styles for the header of the card*/
+.card-details h1 {
+  line-height: 1.25;
+  font-weight: 500;
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*styles for the card btn*/
+.card-btn {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.7rem 5.3rem;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  /*styles for the card color*/
+  .card span {
+    width: 2%;
+  }
+
+  /*styles for the card btn*/
+  .card-btn {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.7rem 18rem;
+    margin: auto;
+  }
+}
