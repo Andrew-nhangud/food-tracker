@@ -1,6 +1,7 @@
 import { useState } from "react";
 import refrigerateIcon from "../../assets/icons/refrigerate.svg";
 import "./Navbar.css";
+import { Form } from "../form/Form";
 
 export const Navbar = () => {
   const [hide, setHide] = useState(false);
@@ -29,8 +30,18 @@ export const Navbar = () => {
       {/* markup for the modal */}
       {hide && (
         <div className="modal">
-          I'm hire
-          <button onClick={handleChange}>close</button>
+          <div className="modal-container">
+            <div className="modal-info">
+              <div>
+                <h2 className="modal-sub-header">NEW ITEM</h2>
+                <h1 className="modal-header">Add to frigde</h1>
+              </div>
+              <button onClick={handleChange} className="modal-close-btn">
+                +
+              </button>
+            </div>
+            <Form />
+          </div>
         </div>
       )}
     </nav>
