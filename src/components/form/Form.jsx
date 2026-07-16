@@ -14,7 +14,7 @@ export const Form = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form">
-      <div className="form-filed">
+      <div className="form-field">
         <label htmlFor="itemName">ITEM NAME</label>
         <input
           type="text"
@@ -26,14 +26,15 @@ export const Form = () => {
       </div>
 
       <div className="combined-fields">
-        <div className="form-filed">
+        <div className="form-field">
           <label htmlFor="category">CATEGORY</label>
           <select
             name="category"
             id="category"
+            className="resized-field category-field"
             {...register("category", { required: "Required" })}
           >
-            <option value="">Select a category</option>
+            <option value="">Select</option>
             <option value="produce">Produce</option>
             <option value="dairy">Dairy</option>
             <option value="meat">Meat</option>
@@ -43,19 +44,20 @@ export const Form = () => {
           {errors.category && <p>{errors.category.message}</p>}
         </div>
 
-        <div className="form-filed">
+        <div className="form-field">
           <label htmlFor="quantity">QUANTITY</label>
           <input
             type="text"
             id="quantity"
             placeholder="1 bag"
+            className="resized-field"
             {...register("quantity", { required: "Required" })}
           />
           {errors.quantity && <p>{errors.quantity.message}</p>}
         </div>
       </div>
 
-      <div className="form-filed">
+      <div className="form-field">
         <label htmlFor="bestBefore">BEST BEFORE</label>
         <input
           type="date"
@@ -65,10 +67,9 @@ export const Form = () => {
         {errors.bestBefore && <p>{errors.bestBefore.message}</p>}
       </div>
 
-      <div>
-        <button>Cancel</button>
-        <button type="submit">Add item</button>
-      </div>
+      <button type="submit" className="submit-btn">
+        Add item
+      </button>
     </form>
   );
 };
