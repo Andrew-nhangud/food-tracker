@@ -8,7 +8,7 @@
   background-color: var(--bg-color);
 }
 
-/* navbar items */
+/* navbar styles for the items */
 .navbar-items {
   display: flex;
   justify-content: space-between;
@@ -43,10 +43,53 @@
 
 /*styles for the pop up modal*/
 .modal {
-  position: fixed;
-  top: 5rem;
-  left: 2rem; /*pushing the modal to the center*/
-  width: 80%; /*setting the width of the modal*/
+  position: fixed; /* making the modal fixed to the screen*/
+  top: 7rem; /*setting the distance from the top of the screen*/
+  left: 1rem; /*pushing the modal to the center*/
+  width: 90%; /*setting the width of the modal*/
+  background-color: var(--bg-color);
+  padding: 2rem 0;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2); /*adding a shadow to the modal*/
+  border: 1px solid var(--secondary);
+}
+
+/*styles for the inner container*/
+.modal-container {
+  width: 92%; /*setting the width of the form*/
+  margin: auto; /* setting the form fields to placed in the center */
+}
+
+/*atyles for the modal info container*/
+.modal-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/*styles for the modal subheader*/
+.modal-sub-header {
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+/*styles for the modal header*/
+.modal-header {
+  color: var(--primary);
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0.4rem;
+}
+
+/* styles for the modal button */
+.modal-close-btn {
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Adds a smooth animation */
+  transform: rotate(45deg); /* Rotates the + into an X */
+  border: none;
   background-color: var(--bg-color);
 }
 
@@ -69,7 +112,16 @@
 
   /*styles for the pop up modal*/
   .modal {
-    top: 6rem;
-    left: 4.8rem; /*pushing the modal to the center*/
+    top: 7.5rem; /*setting the distance from the top of the screen*/
+    left: 50%; /* center the modal horizontally */
+    transform: translateX(-50%); /* offset half its width for true centering */
+    width: 55%; /*setting the width of the modal*/
+  }
+}
+
+@media (min-width: 1024px) {
+  /*styles for the pop up modal*/
+  .modal {
+    width: 41%; /*setting the width of the modal*/
   }
 }
