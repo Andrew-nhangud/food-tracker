@@ -1,0 +1,66 @@
+/* styles for the form fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* let each field fill the available width */
+}
+
+/* styles to combine two form fields */
+.combined-fields {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* make the row stretch with the form container */
+}
+
+/* make both fields share the row evenly */
+.combined-fields .form-field {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* styles for the two fields in the same block */
+.resized-field {
+  width: 100%; /* ensure the select and input grow with the parent */
+  box-sizing: border-box; /* keep padding and borders inside the width */
+}
+
+/*styles for the category field*/
+.category-field {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* styles for the form field name */
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 0.2rem;
+}
+
+/* styles for the input */
+input {
+  padding: 0.86rem 0.8rem;
+  margin-bottom: 1.4rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*styles for the submit button*/
+.submit-btn {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  width: 100%; /* make the button grow with the form container */
+  box-sizing: border-box; /* keep the full width consistent */
+  margin: 0;
+}
